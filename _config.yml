@@ -1,7 +1,37 @@
-title: Site do Hossomi
+title: Hossomi
 email: marcelo.hossomi@gmail.com
+github_username:  hossomi
+
 description: >-
-  O site do Hossomi!
+  Espaço pessoal do Hossomi/
 url: "https://hossomi.github.io"
 baseurl: ""
-github_username:  hossomi
+
+author:
+  name: Marcelo Y. B. Hossomi
+  avatar: /assets/images/profile.png
+  bio: Pai de planta, tocador de taiko, aspirante a artista. Desenvolvedor de software movido a café.
+  location: Curitiba, Brasil
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hossomi"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/marcelohossomi"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hossomi"
+    - label: "Instagram"
+      icon: "fab fa-fw fa-instagram"
+      url: "https://instagram.com/marcelohossomi"
+
+atom_feed:
+  hide: true
+
+# Theme
+theme: minimal-mistakes-jekyll
+logo: "/assets/images/88x88.png"
