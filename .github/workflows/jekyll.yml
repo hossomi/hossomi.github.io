@@ -2,8 +2,11 @@ name: Deploy Jekyll site to Pages
 
 on:
   push:
-    branches: ["main"]
-    
+    branches: [main]
+
+  pull_request:
+    branches: [main]
+
   workflow_dispatch:
 
 permissions:
@@ -25,7 +28,7 @@ jobs:
       - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4
         with:
-          ruby-version: '3.4.7'
+          ruby-version: '3.4'
           bundler-cache: true
           
       - name: Setup Pages
@@ -42,6 +45,7 @@ jobs:
 
   deploy:
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
     needs: [build]
     environment:
       name: github-pages
