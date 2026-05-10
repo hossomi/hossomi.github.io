@@ -1,11 +1,10 @@
 title: Hossomi
 email: marcelo.hossomi@gmail.com
-github_username:  hossomi
+github_username: hossomi
 
-description: >-
-  Espaço pessoal do Hossomi/
-url: "https://hossomi.github.io"
-baseurl: ""
+description: Espaço pessoal do Hossomi
+url: 'https://hossomi.github.io'
+baseurl: ''
 
 author:
   name: Marcelo Y. B. Hossomi
@@ -13,25 +12,49 @@ author:
   bio: Pai de planta, tocador de taiko, aspirante a artista. Desenvolvedor de software movido a café.
   location: Curitiba, Brasil
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/hossomi"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/marcelohossomi"
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: 'https://github.com/hossomi'
+    - label: Instagram
+      icon: fab fa-fw fa-instagram
+      url: 'https://instagram.com/marcelohossomi'
 
 footer:
   links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/hossomi"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/marcelohossomi"
+    - label: GitHub
+      icon: fab fa-fw fa-github
+      url: 'https://github.com/hossomi'
+    - label: Instagram
+      icon: fab fa-fw fa-instagram
+      url: 'https://instagram.com/marcelohossomi'
 
+collections_dir: content
+collections:
+  pt:
+    output: true
+  en:
+    output: true
+
+defaults:
+  - scope:
+      path: ''
+    values:
+      layout: single
+      author_profile: true
+  - scope:
+      path: ''
+      type: pt
+    values:
+      permalink: /:collection/:slug
+  - scope:
+      path: ''
+      type: en
+    values:
+      permalink: /:collection/:slug
+      
 atom_feed:
   hide: true
 
 # Theme
-theme: minimal-mistakes-jekyll
-logo: "/assets/images/88x88.png"
+# theme: minimal-mistakes-jekyll
+logo: /assets/images/88x88.png
