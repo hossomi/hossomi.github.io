@@ -1,0 +1,44 @@
+@use "../variables/layout.scss";
+@use "../variables/typography.scss";
+
+.landing-page {
+    display: flex;
+    flex-direction: column;
+    // TODO: remove debug background
+    background: lightgray;
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        
+        font-size: typography.$font-size-4;
+        text-align: center;
+    }
+
+    .links {
+        display: flex;
+        flex-direction: column;
+        
+        margin: 0 auto;
+    }
+
+    .card {
+        font-size: typography.$font-size-3;
+        font-family: typography.$font-family-header;
+        font-weight: bold;
+        text-decoration: none;
+        text-align: left;
+        color: gray;
+        line-height: 3em;
+
+        background: white;
+
+        border-radius: 0.25em;
+        margin-bottom: layout.$spacing-xsmall;
+        padding: 0 layout.$spacing-small;
+
+        &:hover {
+            background: lightgreen;
+        }
+    }
+}

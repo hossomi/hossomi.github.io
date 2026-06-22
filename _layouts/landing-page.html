@@ -1,0 +1,31 @@
+---
+layout: default
+
+# Layout parameters:
+#
+# title: header title
+# subtitle: header subtitle
+---
+  
+<div class="landing-page">
+  <div class="hero">
+    <div class="hero-content">
+      <h1>{{ page.title | default: site.title }}</h1>
+      {% if page.subtitle %}
+        <p class="hero-subtitle">
+          {{ page.subtitle }}
+        </p>
+      {% endif %}
+    </div>
+  </div>
+  <div class="main-content">
+    <section class="preamble">
+      {{ content }}
+    </section>
+    <section class="links">
+      {% for link in page.links %}
+        <a class="card" href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </section>
+  </div>
+</div>

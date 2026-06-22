@@ -1,0 +1,19 @@
+@use "variables/layout.scss";
+@use "variables/typography.scss";
+
+.hero {
+    // TODO: remove debug background
+    background: gray;
+    padding: layout.$spacing-xlarge 0;
+}
+
+.hero-content {
+    max-width: layout.$content-max;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 layout.$spacing-medium;
+}
+
+.hero-subtitle {
+    font-size: typography.$font-size-4
+}

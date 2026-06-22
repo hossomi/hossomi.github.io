@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="{{ page.collection | default: 'pt' }}">
+
+<head>
+  {% include head.html %}
+</head>
+
+<body>
+  {% comment %} <nav>
+    {% for collection in site.collections %}
+      {% if collection.label != "posts" %}
+        <a href="/">{{ collection.label | upcase }}</a>
+      {% endif %}
+    {% endfor %}
+  </nav> {% endcomment %}
+  <div class="default-content">
+    {{ content }}
+  </div>
+
+  <footer>
+    {% include footer.html %}
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+@use "variables/layout.scss";
+@use "variables/typography.scss";
+
+// Default main-content style applied to all layouts with content.
+// May be overriden by specific layout styles.
+.main-content {
+    flex-grow: 1;
+    
+    min-width: layout.$content-small;
+    max-width: layout.$content-max;
+    width: 100%;
+
+    margin: 0 auto;
+    padding: layout.$spacing-large layout.$spacing-medium;
+}

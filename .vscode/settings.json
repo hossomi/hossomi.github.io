@@ -1,0 +1,14 @@
+{
+    "files.exclude": {
+        "**/.jekyll-cache": true,
+        "**/.bundle": true,
+        "vendor": true
+    },
+    "files.associations": {
+        "**/_includes/*.html": "liquid",
+        "**/_layouts/*.html": "liquid",
+        "**/assets/css/*.scss": "liquid-scss",
+        "**/assets/css/*.css": "liquid-css",
+        "**/content/**/*.html": "liquid"
+    }
+}
