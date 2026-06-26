@@ -1,3 +1,4 @@
+@use "variables/colors.scss";
 @use "variables/typography.scss";
 
 html {
@@ -12,8 +13,11 @@ body {
 
     margin: 0;
 
+    background: colors.$background;
+
     font-family: typography.$font-family-global;
     font-size: typography.$font-size-5;
+    color: colors.$foreground;
 }
 
 h1,

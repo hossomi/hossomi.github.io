@@ -1,11 +1,10 @@
+@use "../variables/colors.scss";
 @use "../variables/layout.scss";
 @use "../variables/typography.scss";
 
 .landing-page {
     display: flex;
     flex-direction: column;
-    // TODO: remove debug background
-    background: lightgray;
 
     .main-content {
         display: flex;
@@ -31,7 +30,7 @@
         color: gray;
         line-height: 3em;
 
-        background: white;
+        background: colors.$background-dark;
 
         border-radius: 0.25em;
         margin-bottom: layout.$spacing-xsmall;

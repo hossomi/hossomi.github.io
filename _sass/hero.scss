@@ -1,10 +1,12 @@
+@use "variables/colors.scss";
 @use "variables/layout.scss";
 @use "variables/typography.scss";
 
 .hero {
-    // TODO: remove debug background
-    background: gray;
+    background: colors.$background-dark;
     padding: layout.$spacing-xlarge 0;
+
+    color: colors.$foreground-light;
 }
 
 .hero-content {
