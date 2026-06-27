@@ -9,3 +9,6 @@ collections:
   en:
     output: true
     permalink: /:collection/:slug
+
+defaults:
+  language: pt

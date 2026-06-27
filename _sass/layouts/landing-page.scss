@@ -27,7 +27,7 @@
         font-weight: bold;
         text-decoration: none;
         text-align: left;
-        color: gray;
+        color: colors.$foreground-light;
         line-height: 3em;
 
         background: colors.$background-dark;
@@ -37,7 +37,7 @@
         padding: 0 layout.$spacing-small;
 
         &:hover {
-            background: lightgreen;
+            background: colors.$background-medium;
         }
     }
 }

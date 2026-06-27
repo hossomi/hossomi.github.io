@@ -5,8 +5,11 @@ layout: default
 #
 # title: header title
 # subtitle: header subtitle
+# links: 
+#   - title: link card title
+#     url: link card URL
 ---
-  
+
 <div class="landing-page">
   <div class="hero">
     <div class="hero-content">
@@ -24,7 +27,15 @@ layout: default
     </section>
     <section class="links">
       {% for link in page.links %}
-        <a class="card" href="{{ link.url }}">{{ link.title }}</a>
+        {% comment %}
+          If rendered from outside a collection (e.g. main page), link to the default language
+        {% endcomment %}
+        {% if page.collection %}
+          {% assign url = link.url %}
+        {% else %}
+          {% assign url = site.defaults.language | append: "/" | append: link.url %}
+        {% endif %}
+        <a class="card" href="{{ url }}">{{ link.title }}</a>
       {% endfor %}
     </section>
   </div>
