@@ -1,5 +1,9 @@
-$font-family-global: "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
-$font-family-header: "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", Arial, sans-serif;
+$default-sans-serif: "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", "Arial", "sans-serif";
+$default-serif: "Georgia", "Times", "serif";
+$default-monospace: "Monaco", "Consolas", "Lucida Console", "monospace";
+
+$font-family-global: $default-sans-serif;
+$font-family-header: $default-serif;
 
 $font-size-1: 2.441em !default;
 $font-size-2: 1.953em !default;

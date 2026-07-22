@@ -11,16 +11,8 @@ layout: default
 ---
 
 <div class="landing-page">
-  <div class="hero">
-    <div class="hero-content">
-      <h1>{{ page.title | default: site.title }}</h1>
-      {% if page.subtitle %}
-        <p class="hero-subtitle">
-          {{ page.subtitle }}
-        </p>
-      {% endif %}
-    </div>
-  </div>
+  {% include hero.html %}
+
   <div class="main-content">
     <section class="preamble">
       {{ content }}

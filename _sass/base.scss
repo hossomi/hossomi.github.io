@@ -1,5 +1,10 @@
 @use "variables/colors.scss";
+@use "variables/layout.scss";
 @use "variables/typography.scss";
+
+* {
+    box-sizing: border-box;
+}
 
 html {
     min-height: 100%;
@@ -26,6 +31,7 @@ h3,
 h4,
 h5,
 h6 {
+    margin: layout.$spacing-medium 0 layout.$spacing-small;
     font-family: typography.$font-family-header;
 }
 
@@ -51,4 +57,8 @@ h5 {
 
 h6 {
     font-size: typography.$font-size-6;
+}
+
+p {
+    margin: layout.$spacing-medium 0;
 }

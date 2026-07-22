@@ -1,0 +1,15 @@
+{% comment %} 
+Inputs:
+  title: The hero title (default: page.title, site.title)
+  description: Paragraphs below the titls (default: page.description)
+{% endcomment %}
+
+{% assign title = include.title | default: page.title | default: site.title %}
+{% assign description = include.description | default: page.description %}
+
+<div class="hero">
+  <div class="hero-content">
+    <h1>{{ title | markdownify | remove: '<p>' | remove: '</p>' }}</h1>
+    {{ description | markdownify }}
+  </div>
+</div>
