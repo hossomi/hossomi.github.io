@@ -10,5 +10,8 @@
         "**/assets/css/*.scss": "liquid-scss",
         "**/assets/css/*.css": "liquid-css",
         "**/content/**/*.html": "liquid"
+    },
+    "[liquid]": {
+        "editor.formatOnSave": true
     }
 }

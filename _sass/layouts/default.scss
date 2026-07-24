@@ -1,5 +1,7 @@
+@use "../variables/colors.scss";
+
 footer {
-    background: lightgreen;
+    background: colors.$gray-medium;
 }
 
 .default-content {
