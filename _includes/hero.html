@@ -1,7 +1,7 @@
 {% comment %} 
-Inputs:
-  title: The hero title (default: page.title, site.title)
-  description: Paragraphs below the titls (default: page.description)
+  Inputs:
+    title: The hero title (default: page.title, site.title)
+    description: Paragraphs below the titls (default: page.description)
 {% endcomment %}
 
 {% assign title = include.title | default: page.title | default: site.title %}

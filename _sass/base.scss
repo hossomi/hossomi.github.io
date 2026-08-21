@@ -21,7 +21,7 @@ body {
     background: colors.$background;
 
     font-family: typography.$font-family-global;
-    font-size: typography.$font-size-5;
+    font-size: typography.$font-size-4;
     color: colors.$foreground;
 }
 
@@ -33,6 +33,7 @@ h5,
 h6 {
     margin: layout.$spacing-medium 0 layout.$spacing-small;
     font-family: typography.$font-family-header;
+    font-weight: normal;
 }
 
 h1 {

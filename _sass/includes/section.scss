@@ -1,0 +1,22 @@
+@use "variables/colors.scss";
+@use "variables/layout.scss";
+@use "variables/typography.scss";
+
+.showcase-page section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: layout.$spacing-medium;
+
+    margin-bottom: layout.$spacing-xlarge;
+
+    img {
+        width: 100%;
+        border-radius: layout.$spacing-large;
+        box-shadow: colors.$background-dark 5px 5px 15px -5px;
+    }
+
+    .section-content {
+        grid-column: span 3;
+        text-align: justify;
+    }
+}

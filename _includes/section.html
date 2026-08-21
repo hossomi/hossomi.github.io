@@ -1,0 +1,22 @@
+{% comment %} 
+  Inputs:
+    image_url: Section image URL.
+    image_right: 'true' to align image to the right; align to the left otherwise or by default.
+{% endcomment %}
+
+<section>
+  {% if include.image_right == false %}
+    <img src="{{ include.image_url }}"/>
+  {% endif %}
+
+  <div class="section-content">
+    <h2>{{ include.title }}</h2>
+    <p>
+      {{ include.content | markdownify }}
+    </p>
+  </div>
+
+  {% if include.image_right %}
+    <img src="{{ include.image_url }}"/>
+  {% endif %}
+</section>

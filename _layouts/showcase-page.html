@@ -1,0 +1,29 @@
+---
+layout: page
+
+# Layout parameters:
+#
+# title: header title
+# subtitle: header subtitle
+# sections: list of sections
+#   - title: Section title
+#     image: Section image URL
+#     content: Section content
+---
+
+{% assign image_right = false %}
+{% for section in page.sections %} 
+  {% include section.html
+    title = section.title
+    content = section.content
+    image_url = section.image
+    image_right = image_right
+  %}
+  {% if section.image %}
+    {% if image_right %}
+      {% assign image_right = false %}
+    {% else  %}
+      {% assign image_right = true %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
