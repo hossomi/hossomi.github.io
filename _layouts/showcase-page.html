@@ -5,25 +5,38 @@ layout: page
 #
 # title: header title
 # subtitle: header subtitle
-# sections: list of sections
+# sections: list of sections and separators
 #   - title: Section title
 #     image: Section image URL
 #     content: Section content
 ---
 
-{% assign image_right = false %}
-{% for section in page.sections %} 
-  {% include section.html
-    title = section.title
-    content = section.content
-    image_url = section.image
-    image_right = image_right
-  %}
-  {% if section.image %}
-    {% if image_right %}
-      {% assign image_right = false %}
-    {% else  %}
-      {% assign image_right = true %}
+{% for section in page.sections %}
+  {% if section.content %}
+    {% if section.image %}
+      {% if image_side == "left" %}
+        {% assign image_side = "right" %}
+      {% else %}
+        {% assign image_side = "left" %}
+      {% endif %}
     {% endif %}
+    <section>
+      {% if section.image and image_side == "left" %}
+        <img src="{{ section.image }}" class="{{ image_side }}"/>
+      {% endif %}
+
+      <div class="content">
+        <h2>{{ section.title }}</h2>
+        {{ section.content | markdownify }}
+      </div>
+      
+      {% if section.image and image_side == "right" %}
+        <img src="{{ section.image }}" class="{{ image_side }}"/>
+      {% endif %}
+    </section>
+  {% else %}
+    {% assign image_side = nil %}
+    <h1>{{ section.title }}</h1>
   {% endif %}
+
 {% endfor %}

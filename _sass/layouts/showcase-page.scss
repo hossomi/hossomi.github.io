@@ -1,0 +1,36 @@
+@use "variables/colors.scss";
+@use "variables/layout.scss";
+@use "variables/typography.scss";
+
+.showcase-page {
+    section {
+        display: flex;
+
+        background: colors.$gray-light;
+        box-shadow: colors.$background-dark 5px 5px 15px -5px;
+        border-radius: layout.$spacing-large;
+        margin-bottom: layout.$spacing-xlarge;
+
+        img {
+            max-width: 25%;
+            align-self: flex-start;
+
+            &.left {
+                border-radius: layout.$spacing-large 0 0 layout.$spacing-large;
+            }
+            
+            &.right {
+                border-radius: 0 layout.$spacing-large layout.$spacing-large 0;
+            }
+        }
+
+        .content {
+            text-align: justify;
+            padding: 0 layout.$spacing-large;
+        }
+    }
+
+    h1 {
+        text-align: center;
+    }
+}
