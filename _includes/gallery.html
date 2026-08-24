@@ -1,0 +1,24 @@
+{% comment %} 
+  Inputs:
+    cards:
+      - title: Card title
+      - content: Card content
+      - image: Card image
+      - link: Bottom link
+{% endcomment %}
+
+<section class="gallery">
+  {% for card in include.cards %}
+    <div class="card">
+      <div class="cover" style="background-image: url({{ card.image }})">
+      </div>
+      <div class="content">
+        <h2>{{ card.title }}</h2>
+        {{ card.content | markdownify }}
+      </div>
+      {% if card.link %}
+        <a href="{{ card.link }}">Saiba mais</a>
+      {% endif %}
+    </div>
+  {% endfor %}
+</section>

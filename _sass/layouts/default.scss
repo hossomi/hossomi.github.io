@@ -1,7 +1,13 @@
 @use "../variables/colors.scss";
+@use "../variables/layout.scss";
+@use "../variables/typography.scss";
 
 footer {
-    background: colors.$gray-medium;
+    background: colors.$background-light;
+    font-size: typography.$font-size-6;
+    text-align: center;
+
+    padding: layout.$spacing-small;
 }
 
 .default-content {

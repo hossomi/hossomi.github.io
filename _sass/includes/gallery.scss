@@ -1,0 +1,50 @@
+@use "variables/colors.scss";
+@use "variables/layout.scss";
+@use "variables/typography.scss";
+
+section.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: layout.$spacing-large;
+
+    .card {
+        display: flex;
+        flex-direction: column;
+
+        background: colors.$gray-light;
+        box-shadow: colors.$background-medium 0 layout.$spacing-small layout.$spacing-medium;
+        border-radius: layout.$spacing-medium;
+        overflow: hidden;
+
+        div.cover {
+            width: 100%;
+            aspect-ratio: 1.60;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        div.content {
+            flex: 1;
+            padding: layout.$spacing-medium;
+
+            h2 {
+                margin-top: 0;
+            }
+        }
+
+        a {
+            height: layout.$spacing-large;
+            background: colors.$background-dark;
+            
+            color: colors.$gray-light;
+            font-size: typography.$font-size-4;
+            line-height: layout.$spacing-large;
+            text-decoration: none;
+            text-align: center;
+            
+            &:hover {
+                background: colors.$background-medium;
+            }
+        }
+    }
+}
