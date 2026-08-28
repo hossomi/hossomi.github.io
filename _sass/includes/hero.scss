@@ -4,29 +4,42 @@
 
 div.hero {
     background: colors.$background-dark;
-    padding: layout.$spacing-xlarge;
-
     color: colors.$foreground-light;
+    
+    div.content {
+        display: flex;
+        gap: layout.$spacing-xlarge;
 
-    .hero-content {
         max-width: layout.$content-max;
         width: 100%;
-
+        
         margin: 0 auto;
-
-        font-size: typography.$font-size-4;
-
+        
+        
+        div.cover {
+            flex: 1;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: 50%;
+            box-shadow: inset black 0px 0px 10px;
+        }
+        
+        div.text {
+            flex: 2;
+            padding: layout.$spacing-xlarge 0;
+        }
+        
         h1 {
             margin-top: 0;
-            font-size: calc(typography.$font-size-1 * 1.5);
+            font-size: calc(typography.$font-size-1 * 2);
             font-weight: normal;
             text-shadow: black 2px 2px 2px;
         }
-
+        
         p {
             margin: layout.$spacing-small 0;
             font-family: typography.$font-family-header;
-            font-size: typography.$font-size-4;
+            font-size: typography.$font-size-3;
         }
     }
 }

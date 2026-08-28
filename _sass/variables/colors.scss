@@ -1,10 +1,18 @@
+$primary-light: #E6F2DD;
+$primary-medium: #618764;
+$primary-dark: #273338;
+
+$secondary-light: #C9AD82;
+$secondary-medium: #8B6544 ;
+$secondary-dark: #332A24;
+
 $gray-light: #f0f0f0;
-$gray-medium: #808080;
+$gray-medium: #A0A0A0;
 $gray-dark: #101010;
 
-$background-light: #E6F2DD;
-$background-medium: #618764;
-$background-dark: #273338;
+$background-light: $primary-light;
+$background-medium: $primary-medium;
+$background-dark: $primary-dark;
 $background: $background-light;
 
 $foreground-light: $gray-light;

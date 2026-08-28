@@ -1,19 +1,92 @@
 ---
-layout: landing-page
+layout: page
 
 title: Marcelo Hossomi
-description: |
-  Desenvolvedor de software. Tocador de Taiko. Artista amador.
+subtitle: Engenheiro de software. Artista amador. Apenas humano.
+cover: /assets/images/profile.png
 
-  Uma pessoa tentando fazer o seu melhor.
+about: |
+  Bem vindo ao meu espaço na internet! Aqui vou compartilhar um pouco da do meu trabalho, minha arte e meus projetos.
 
-links:
-  - title: Humano
-    url: human
-  - title: Desenvolvedor
-    url: human      
+  É também um playground para aprender design e desenvolvimento web, então não se assuste se tudo mudar (ou quebrar) de repente :)
+
+sections:
+  - cover: /assets/images/about/me.png
+    content: |
+      Me chamam apenas de **Hossomi** (exceto minha família).
+
+      Nasci em 1992 em **Presidente Prudente**, no interior de São Paulo.
+      
+      Atualmente, moro em **Curitiba** no Paraná.
+      
+  - cover: /assets/images/about/me.png
+    link: '#work'
+    link_label: Leia mais
+    content: |
+      Sou formado em **engenharia de computação** pela **USP São Carlos**.
+      
+      Trabalho como desenvolvedor backend, mas se precisar consigo lidar com a stack toda.
+
+  - cover: /assets/images/about/me.png
+    content: |
+      Não **viajo** muito, mas já estive em alguns países:
+
+      - Japão (2014, intercâmbio)
+      - Inglaterra (2016, trabalho)
+      - Índia (2024, trabalho)
+      - Itália (2025, trabalho)
+      
+  - cover: /assets/images/about/taiko.png
+    content: |
+      Toco **Taiko** desde 2008.
+      
+      Participar da comunidade japonesa através da arte me faz sentir vivo!
+    
+      Grupos que já participei:
+      - Wakaba (Curitiba)
+      - Yanagi (São Carlos)
+      - Dantai Fênix (P. Prudente)
+
+  - cover: /assets/images/about/me.png
+    link: https://www.instagram.com/marcelohossomi
+    link_label: Instagram
+    content: |
+      Desde criança, gosto de **desenhar** em papel. Inspirado pelos animes japoneses, mas hoje não uso nenhum estilo específico.
+
+      Não desenho com a mesma frequência de antes. Tenho os mais recentes no meu Instagram!
+
+  - cover: /assets/images/about/me.png
+    content: |
+      Tenho várias **plantas** mesmo morando em um apartamento frio e com pouco sol.
+
+      Adoro acompanhar cada folha crescendo e as mudas criando raizes!
+      
+      Minha preferida é uma rosa do deserto que ganhei da minha mãe.
+
+  - cover: /assets/images/about/me.png
+    content: |
+      Não sou gamer, mas adoro **jogos** de plataforma, estratégia e ação. Jogo os mesmos jogos há décadas.
+
+      Alguns favoritos:
+        - Factorio
+        - Age of Empires II
+        - Diablo II
+        - Silksong
+
+  - cover: /assets/images/about/me.png
+    content: |
+      Recentemente comecei aulas de **piano**. Quando eu estiver satisfeito com minha habilidade, também compartilharei aqui!
+
+      Meu interesse e apreciação por música tem crescido bastante. Talvez seja a idade? O canto dos pássaros sempre foi tão agradável assim?
+
 ---
 
-<section>
-    <p>Escolha uma das minhas versões para saber mais</p>
+<section class="panel">
+  {{ page.about | markdownify }}
 </section>
+
+<h1>Sobre</h1>
+
+{% include gallery.html cards = page.sections columns = 4%}
+
+<h1>Profissão</h1>

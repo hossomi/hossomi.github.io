@@ -14,3 +14,46 @@ footer {
     flex-grow: 1;
     overflow: auto;
 }
+
+// Common useful classes
+
+.panel {
+    position: relative;
+    max-width: 75%;
+
+    margin: layout.$spacing-xlarge auto;
+    padding: layout.$spacing-medium layout.$spacing-xlarge;
+    
+    font-size: typography.$font-size-4;
+    text-align: center;
+
+    background: colors.$gray-light;
+    $border-width: 150px;
+    $border-height: 4px;
+
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: $border-width;
+        height: $border-height;
+        left: 0;
+        right: 0;
+        top: calc($border-height * -0.5);
+        margin: 0 auto;
+        background: colors.$secondary-medium;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        width: $border-width;
+        height: $border-height;
+        left: 0;
+        right: 0;
+        bottom: calc($border-height * 0.5);
+        margin: 0 auto;
+        background: colors.$secondary-medium;
+    }
+}

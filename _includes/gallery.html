@@ -1,24 +1,36 @@
 {% comment %} 
   Inputs:
     cards:
+      - columns: Number of columns
       - title: Card title
       - content: Card content
-      - image: Card image
+      - cover: Card cover image
       - link: Bottom link
+      - link_label: Bottom link label
 {% endcomment %}
 
-<section class="gallery">
+{% assign columns = include.columns | default: 4 %}
+{% assign grid_size = cards.size | divided_by: columns | times: columns %}
+
+<section class="gallery" style="grid-template-columns: repeat({{ columns }}, 1fr)">
   {% for card in include.cards %}
     <div class="card">
-      <div class="cover" style="background-image: url({{ card.image }})">
-      </div>
+      {% if card.cover %}
+        <div class="cover" style="background-image: url({{ card.cover }})"> </div>
+      {% endif %}
       <div class="content">
-        <h2>{{ card.title }}</h2>
+        {% if card.title %}
+          <h2>{{ card.title }}</h2>
+        {% endif %}
         {{ card.content | markdownify }}
       </div>
       {% if card.link %}
-        <a href="{{ card.link }}">Saiba mais</a>
+        <a href="{{ card.link }}">{{ card.link_label }}</a>
       {% endif %}
     </div>
+  {% endfor %}
+
+  {% for i in (cards.size .. grid_size) %}
+    <div class="card empty"></div>
   {% endfor %}
 </section>

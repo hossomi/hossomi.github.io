@@ -1,0 +1,13 @@
+@use "../variables/colors.scss";
+@use "../variables/layout.scss";
+@use "../variables/typography.scss";
+
+.page {
+    .main-content {
+        h1 {
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+    }
+}

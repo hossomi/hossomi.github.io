@@ -4,19 +4,20 @@
 
 section.gallery {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: layout.$spacing-large;
+    gap: layout.$spacing-medium;
 
     .card {
         display: flex;
         flex-direction: column;
+        position: relative;
 
         background: colors.$gray-light;
-        box-shadow: colors.$background-medium 0 layout.$spacing-small layout.$spacing-medium;
+        box-shadow: colors.$background-medium 0 0.5em 1em -0.5em;
         border-radius: layout.$spacing-medium;
         overflow: hidden;
-
+        
         div.cover {
+            // border-radius: layout.$spacing-medium;
             width: 100%;
             aspect-ratio: 1.60;
             background-size: cover;
@@ -30,21 +31,37 @@ section.gallery {
             h2 {
                 margin-top: 0;
             }
+
+            p {
+                margin: layout.$spacing-small 0;
+            }
+
+            ul,
+            ol {
+                margin: layout.$spacing-small 0;
+                padding-left: layout.$spacing-large;
+            }
         }
 
         a {
             height: layout.$spacing-large;
             background: colors.$background-dark;
-            
+
             color: colors.$gray-light;
             font-size: typography.$font-size-4;
             line-height: layout.$spacing-large;
             text-decoration: none;
             text-align: center;
-            
+
             &:hover {
                 background: colors.$background-medium;
             }
         }
+
+        &.empty {
+            background: colors.$background-light;
+            box-shadow: inset colors.$background-medium 0 0 50px -25px;
+        }
+
     }
 }
